@@ -1,31 +1,39 @@
-img {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    border: 3px solid #61b292;
-    overflow: hidden;
-}
+link[rel="icon"] {
+    border-radius: 50%;
 
-img {
-    position: absolute;
-    top: 15px; 
-    left: 10px; 
-    transition: transform 0.3s ease; 
 }
-
-img:hover {
-    transform: translate(10px, 10px); 
-}
-
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ad7f13;
     margin: 0;
     padding: 0;
 }
 
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+
+img {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    border: 3px solid #61b292;
+    overflow: hidden;
+    transition: transform 0.1s ease;
+}
+
+img:hover {
+    transform: translate(10px, 10px);
+}
+
 header {
+    grid-column: span 2;
     background-color: #f4eec0;
     color: #7e6752;
     text-align: center;
@@ -39,6 +47,8 @@ section {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
 
 h1, h2, h3 {
     color: #333;
@@ -61,6 +71,7 @@ th, td {
     border-bottom: 1px solid #ddd;
 }
 
+
 a {
     color: #7e6752;
     padding: 20px, 20px;
@@ -74,6 +85,11 @@ form {
 label, input, textarea, button {
     display: block;
     margin-bottom: 10px;
+}
+
+textarea {
+    resize: vertical; 
+    width: 100%; 
 }
 
 button {
