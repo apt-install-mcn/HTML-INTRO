@@ -1,4 +1,4 @@
-* {
+body, body * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -28,21 +28,40 @@ body {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinear elementos al inicio verticalmente */
+    align-items: flex-start; 
 }
 
-/* Aplicar estilos a la tabla */
 table {
-    width: 80%; /* O el ancho deseado */
+    width: 80%; 
     border-collapse: collapse;
 }
 
-/* Estilos para las celdas de la tabla */
+
 table td {
     padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+table td:hover {
+    background-color: #f0f0f0; 
 }
 
-/* Aplicar estilos a la sección de habilidades técnicas */
+
+table td::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: rgba(240, 240, 240, 0.5); 
+    transition: width 1.0s ease; 
+    z-index: -1;
+}
+
+table td:hover::before {
+    width: 100%; 
+}
+
+
 .Ht h2 {
     padding: 0px;
     margin-top: 20px;
