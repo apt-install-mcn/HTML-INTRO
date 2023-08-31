@@ -6,7 +6,7 @@ body, body * {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ad7f13;
+    background-color: #2C3E52;
 }
 
 .container {
@@ -19,7 +19,7 @@ body {
 }
 
 .left-column {
-    background-color: #f4eec0;
+    background-color: #effafe;
     color: #7e6752;
     padding: 40px;
     border-radius: 5px;
@@ -91,13 +91,15 @@ table td:hover::before {
 
 
 .perfilimg {
-    width: 200px;
-    height: 250px;
-    border: 3px solid #61b292;
+    width: 250px;
+    height: 300px;
+    border: 3px solid #2C3E52;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 0px;
+    margin-right: ;
 }
 
 .gitimg {
@@ -161,12 +163,28 @@ table td:hover::before {
     margin-bottom: 10px;
 }
 
+#segundo-parrafo {
+    margin-left: 30px;
+}
+#segundo-parrafo2 {
+    margin-left: 30px;
+}
 
+#Proyectos{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#Proyectos2 {
+
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
 
 .platzimg {
     width: 20px;
     height: 20px;
-    margin-left: 190px;
+    margin-left: 210px;
     display: flex;
     position: absolute;
     
@@ -175,7 +193,7 @@ table td:hover::before {
 .platzimg1 {
     width: 20px;
     height: 20px;
-    margin-left: 190px;
+    margin-left: 210px;
     display: flex;
     position: absolute;
     
@@ -184,7 +202,7 @@ table td:hover::before {
 .platzimg2 {
     width: 20px;
     height: 20px;
-    margin-left: 190px;
+    margin-left: 210px;
     display: flex;
     position: absolute;
     
@@ -193,7 +211,7 @@ table td:hover::before {
 .ibmimg {
     width: 20px;
     height: 20px;
-    margin-left: 190px;
+    margin-left: 210px;
     display: flex;
     position: absolute;
     
