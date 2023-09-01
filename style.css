@@ -184,7 +184,7 @@ table td:hover::before {
 .platzimg {
     width: 20px;
     height: 20px;
-    margin-left: 210px;
+    margin-left: 220px;
     display: flex;
     position: absolute;
     
@@ -193,7 +193,7 @@ table td:hover::before {
 .platzimg1 {
     width: 20px;
     height: 20px;
-    margin-left: 210px;
+    margin-left: 220px;
     display: flex;
     position: absolute;
     
@@ -202,7 +202,7 @@ table td:hover::before {
 .platzimg2 {
     width: 20px;
     height: 20px;
-    margin-left: 210px;
+    margin-left: 220px;
     display: flex;
     position: absolute;
     
@@ -211,7 +211,7 @@ table td:hover::before {
 .ibmimg {
     width: 20px;
     height: 20px;
-    margin-left: 210px;
+    margin-left: 220px;
     display: flex;
     position: absolute;
     
@@ -223,3 +223,10 @@ table td:hover::before {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+@media (max-width: 1062px) {
+    .platzimg, .platzimg1, .platzimg2, .ibmimg {
+      margin-left: 0;
+    }
+  }
+  
