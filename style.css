@@ -4,6 +4,42 @@ body, body * {
     box-sizing: border-box;
 }
 
+
+.theme-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+.theme-toggle-checkbox {
+    display: none;
+}
+
+.theme-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #333;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.theme-toggle-checkbox:checked + .theme-toggle-label {
+    left: 50%;
+    background-color: #fff;
+}
+
+
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #2C3E52;
@@ -14,8 +50,9 @@ body {
     grid-template-columns: 1fr;
     gap: 3.5%;
     width: 80%;
-    margin: 0 auto;
+    margin: 0px auto;
     padding: 80px;
+    justify-content: center;
 }
 
 .left-column {
@@ -35,6 +72,21 @@ body {
 
 }
 
+.tel {
+    background-image: linear-gradient(360deg, currentColor, currentColor min(2px, 0.1em), transparent min(2px, 0.1em), transparent);
+    background-repeat: no-repeat;
+    background-size: 0% 100%; /* Inicialmente, la línea estará completamente oculta */
+    position: relative;
+    text-decoration: none;
+    transition: background-size .2s, color .2s;
+    color: #007bff; /* Color del enlace normal */
+}
+
+.tel:hover {
+    background-size: 100% 100%; /* Cuando pasas el mouse, muestra la línea completa */
+    color: #007bff; /* Puedes cambiar el color del texto al pasar el mouse si lo deseas */
+    cursor: pointer;
+}
 
 table {
     width: 80%; 
@@ -113,6 +165,7 @@ table td:hover::before {
     height: 40px;
     margin: 10px;
     border: none;
+    margin-bottom: 22px;
     transition: transform 0.2s; 
 }
 
@@ -121,6 +174,7 @@ table td:hover::before {
     width: 40px;
     height: 40px;
     margin: 10px;
+    margin-bottom: 22px;
     transition: transform 0.2s;
 
 }
@@ -129,12 +183,22 @@ table td:hover::before {
     width: 45px;
     height: 45px;
     margin: 7px;
+    margin-bottom: 20px;
     transition: transform 0.2s;
 
 }
 
-.gitimg:hover, .linkedinimg:hover, .Torreimg:hover {
+.gitimg:hover, .linkedinimg:hover, .Torreimg:hover, .gitimgp:hover, .Whatsappimg:hover {
     transform: scale(1.1); 
+}
+
+.Whatsappimg {
+    width: 95px;
+    height: 80px;
+    margin: 3px;
+
+    margin-left: -18px;
+    transition: transform 0.2s;
 }
 
 
@@ -145,7 +209,7 @@ table td:hover::before {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     margin-top: 3rem;
-    margin-right: 40px;
+    padding-left: 10%;
 
 }
 
@@ -180,6 +244,11 @@ table td:hover::before {
 }
 #segundo-parrafo2 {
     margin-left: 30px;
+}
+
+#segundo-parrafo3 {
+
+    margin-top: 50px;
 }
 
 #Proyectos{
@@ -248,6 +317,19 @@ table td:hover::before {
 
 }
 
+.project-item {
+    display: flex;
+    align-items: center;
+}
+
+.gitimgp {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    transition: transform 0.2s;
+
+} 
+
 @media (max-width: 768px) {
     .container {
         padding: 20px;
@@ -265,6 +347,7 @@ table td:hover::before {
 }
 
 
+
 @media (min-width: 769px) {
     .container {
         grid-template-columns: 1fr 1fr;
@@ -276,7 +359,7 @@ table td:hover::before {
 }
 
 @media (max-width: 1135px) {
-    .platzimg, .platzimg1, .platzimg2, .ibmimg, .googleimg {
+    .platzimg, .platzimg1, .platzimg2, .ibmimg, .googleimg, .gitimgp, {
       margin-left: 0;
     }
   }
