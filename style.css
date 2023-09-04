@@ -4,6 +4,42 @@ body, body * {
     box-sizing: border-box;
 }
 
+
+.theme-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+.theme-toggle-checkbox {
+    display: none;
+}
+
+.theme-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #333;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.theme-toggle-checkbox:checked + .theme-toggle-label {
+    left: 50%;
+    background-color: #fff;
+}
+
+
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #2C3E52;
@@ -14,8 +50,9 @@ body {
     grid-template-columns: 1fr;
     gap: 3.5%;
     width: 80%;
-    margin: 0 auto;
+    margin: 0px auto;
     padding: 80px;
+    justify-content: center;
 }
 
 .left-column {
@@ -25,10 +62,30 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-    margin-top: 40px;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+
+
+}
+
+.tel {
+    background-image: linear-gradient(360deg, currentColor, currentColor min(2px, 0.1em), transparent min(2px, 0.1em), transparent);
+    background-repeat: no-repeat;
+    background-size: 0% 100%; /* Inicialmente, la línea estará completamente oculta */
+    position: relative;
+    text-decoration: none;
+    transition: background-size .2s, color .2s;
+    color: #007bff; /* Color del enlace normal */
+}
+
+.tel:hover {
+    background-size: 100% 100%; /* Cuando pasas el mouse, muestra la línea completa */
+    color: #007bff; /* Puedes cambiar el color del texto al pasar el mouse si lo deseas */
+    cursor: pointer;
 }
 
 table {
@@ -98,8 +155,8 @@ table td:hover::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 0px;
-    margin-right: ;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 
 .gitimg {
@@ -108,6 +165,7 @@ table td:hover::before {
     height: 40px;
     margin: 10px;
     border: none;
+    margin-bottom: 22px;
     transition: transform 0.2s; 
 }
 
@@ -116,24 +174,42 @@ table td:hover::before {
     width: 40px;
     height: 40px;
     margin: 10px;
+    margin-bottom: 22px;
     transition: transform 0.2s;
 
 }
 
-.gitimg:hover, .linkedinimg:hover {
+.Torreimg {
+    width: 45px;
+    height: 45px;
+    margin: 7px;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+
+}
+
+.gitimg:hover, .linkedinimg:hover, .Torreimg:hover, .gitimgp:hover, .Whatsappimg:hover {
     transform: scale(1.1); 
+}
+
+.Whatsappimg {
+    width: 95px;
+    height: 80px;
+    margin: 3px;
+
+    margin-left: -18px;
+    transition: transform 0.2s;
 }
 
 
 .right-column section {
     background-color: #fff;
-    margin-bottom: 10px;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-    margin-top: 40px;
-    margin-right: 40px;
+    margin-top: 3rem;
+    padding-left: 10%;
 
 }
 
@@ -170,6 +246,11 @@ table td:hover::before {
     margin-left: 30px;
 }
 
+#segundo-parrafo3 {
+
+    margin-top: 50px;
+}
+
 #Proyectos{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -181,13 +262,24 @@ table td:hover::before {
     margin-top: 10px;
 }
 
+.googleimg {
+    width: 30px;
+    height: 30px;
+    margin-left: 215px;
+    margin-top: -5px;
+    display: flex;
+    position: absolute;     
+    transition: transform 0.2s;
+}
+
 .platzimg {
     width: 20px;
     height: 20px;
     margin-left: 220px;
     display: flex;
     position: absolute;
-    
+    transition: transform 0.2s;
+
 }
 
 .platzimg1 {
@@ -196,7 +288,8 @@ table td:hover::before {
     margin-left: 220px;
     display: flex;
     position: absolute;
-    
+    transition: transform 0.2s;
+
 }
 
 .platzimg2 {
@@ -205,7 +298,8 @@ table td:hover::before {
     margin-left: 220px;
     display: flex;
     position: absolute;
-    
+    transition: transform 0.2s;
+
 }
 
 .ibmimg {
@@ -213,19 +307,59 @@ table td:hover::before {
     height: 20px;
     margin-left: 220px;
     display: flex;
-    position: absolute;
-    
+    position: absolute;     
+    transition: transform 0.2s;
 }
 
+.platzimg:hover , .platzimg1:hover , .platzimg2:hover , .ibmimg:hover, .googleimg:hover {
 
-@media (min-width: 786px) {
+    transform: scale(1.1); 
+
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+}
+
+.gitimgp {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    transition: transform 0.2s;
+
+} 
+
+@media (max-width: 768px) {
     .container {
-        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+        gap: 2%;
+    }
+
+    .left-column {
+        margin-top: 1rem;
+        padding: 20px;
+    }
+
+    table {
+        width: 100%;
     }
 }
 
-@media (max-width: 1062px) {
-    .platzimg, .platzimg1, .platzimg2, .ibmimg {
+
+
+@media (min-width: 769px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .left-column {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 1135px) {
+    .platzimg, .platzimg1, .platzimg2, .ibmimg, .googleimg, .gitimgp, {
       margin-left: 0;
     }
   }

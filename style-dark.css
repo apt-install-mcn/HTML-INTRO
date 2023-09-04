@@ -1,0 +1,12 @@
+
+body.dark {
+    background-color: #333333; 
+    color: #ffffff;
+  }
+  
+ 
+  body.dark .left-column {
+    background-color: #444;
+    color: #fff; 
+  }
+  

@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-light.css" id="theme-style">
+    <link rel="stylesheet" href="style-dark.css" id="theme-dark-style">
     <link rel="icon" href="https://moisescarrlloncv.000webhostapp.com/img/icon.png" type="image/png">
     <title>Resume</title>
 </head>
-<body>
+<body class="light">
+    <div class="theme-toggle">
+        <input type="checkbox" class="theme-toggle-checkbox" id="theme-toggle-switch">
+        <label class="theme-toggle-label" for="theme-toggle-switch"></label>
+    </div>
+    
+    
+
     <div class="container">
         <div class="left-column">
             <header>
                 <img src="https://moisescarrlloncv.000webhostapp.com/img/20210311_160214-01%20(2).jpg" alt="Foto-cv" width="250" height="300" class="perfilimg">
                 <h1>General Information</h1>
                 <p>Name: Moises Carrillo Niño</p>
-                <p>Phone: +57 305-454-6238</p>
+                <p>Phone: <a href="tel:+573054546238" class="tel"> +57 305-454-6238</a></p>
                 <p>Location: Bogotá, Colombia</p>
 
 
@@ -22,15 +31,19 @@
                     <a href="https://github.com/apt-install-mcn" target="_blank">
                         <img src="https://moisescarrlloncv.000webhostapp.com/img/github.png" alt="GitHub Icon" class="gitimg"></a>
                     <a href="https://www.linkedin.com/in/moises-carrillo-ni%C3%B1o-210994178/" target="_blank">
-                        <img src="https://moisescarrlloncv.000webhostapp.com/img/linkedin.png" alt="LinkedIn Icon" class="linkedinimg">
+                        <img src="https://moisescarrlloncv.000webhostapp.com/img/linkedin.png" alt="LinkedIn Icon" class="linkedinimg"></a>
+                    <a href="https://torre.ai/moosescn20?r=uirdzMi4" target="_blank">
+                        <img src="https://moisescarrlloncv.000webhostapp.com/img/torre.png" alt="Torre Icon" class="Torreimg"></a>
+                    <a href="https://wa.me/qr/Q7VWPOKCKMXFB1" target="_blank">
+                        <img src="img/whatsapp.png" alt="Torre Icon" class="Whatsappimg">
                     </a>
                 </div>
 
 
-            <section>
+            <section>   
                 <div class="Interes">
                 <h2>Hobbies</h2>
-                <table>
+                <table> 
                     <tr>
                         <td id="Interes">• Web Development</td>
                     </tr>
@@ -110,38 +123,64 @@
             <section>
                 <h2>Supplementary Education</h2>
                 <div>
-                    <p><b>Programming Fundamentals with a Web Emphasis</b></p>
-                    <img src="https://moisescarrlloncv.000webhostapp.com/img/ibm.png" alt="IBM Icon" class="ibmimg">
+                    <p id="segundo-parrafo3"><b>Data Analysis with R Programming</b></p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/PDMSFXTW3LG6" target="_blank">
+                    <img src="https://moisescarrlloncv.000webhostapp.com/img/google.png" alt="Google Icon" class="googleimg"></a>
+                    <p id="segundo-parrafo2">March 2023 - June 2023</p>
+                </div>
+                <div>
+                    <p id="segundo-parrafo3"><b>JavaScript</b></p>
+                    <a href="https://platzi.com/p/moises-carrillo/curso/1814-basico-javascript/diploma/detalle/" target="_blank">
+                    <img src="https://moisescarrlloncv.000webhostapp.com/img/platzi.png" alt="Platzi Icon" class="platzimg"></a>
+                    <p id="segundo-parrafo2">March 2023 - April 2023</p>
+                </div>
+                <div>
+                    <p id="segundo-parrafo3"><b>Programming Fundamentals with a Web Emphasis</b></p>
+                    <a href="https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=f555d12365&attid=0.1&permmsgid=msg-f:1741453247193491874&th=182ae2806feb29a2&view=att&disp=inline&saddbat=ANGjdJ9iBdfEKwJxFRhaYRuxHqL8qzbtWA8sPNeftFj1SINK1oUuSO75L4WPJFDPyDXplZIDqr-KqRcZ9eSV_8nxSJ6LGNm7qOFfjDyexu1mXMPZn-IJMxxloZaHBUB2DN1RmdPRO3HLlqgsAtLOhbNKchg0jfRC7YmRl6hcLxauhRf2RrPqPyNNcFcsUAyi_7p5-Z25Yi86GENqeSP_bB8BGwU4NHt4iaDswAIT-JLqsmFSaCv0NKj-H8NwDCWyC9bc9dJqbSsHNYgfnHqUw1YtqiIfdpjEXjJHd69uYIsrPVnjC3HrwZRrlu6ZNoUuUMgCgDuqQvqyYCw6Ww9xZ0797Fvp4SAtjBQcmKBzuBSjnAhT-3ijSQByytc1vfuniEeecFdPbJUUeJh_IXhBsRsXer_VDXv-L31np9UIYW2YIp6XL7fwg5-UqA36hA_hySb_dVryhHe_UbGhCh7jalqpRXQd8JC_QAlK0YY_kf70hS6Kp9OZ9i2LqY_lUANWReOCm_TZvBKS6xbf4Sj7vNJYDEhOzkrKhUJGvlQ26UbB5hrGyvBXPXafsxvlUlq7jQbVUTxg7KxU1K9nUe_RgeQw74xzsolzu_1vJeDqJGqK7kO64b9Bm2bhF27hXCWV4xC1GC0J-pM0JV2tNvBwSfkq6GKMI_UIprG1kimhhFo6lZIKke2JISvstg2Y9xw8Go7YJS8RRF6aGZJk4pNaFvSJjXjl_yDZvUlV284P4vifLSjiG3W9CC60PGM8kGT5bXcwd0sgHOfxryTSwRYKyboZIIfZOcNPI-7E7ppKLT5hMHa1BYkvfjidWe8SDsSGJNk_NUmxulo36bTkRlOT02L75WK4RqaUSpxFZRVFldkkElNpEPb8utLk0Q1Wmotjpc_J6CrtgTCvO6q-3F4Nhlwj57xW6d9YLpUdGutqAhFeS6WljSfFFB7wlQ6MjsjwObvTzOx5Qs74GUIgDtPb6B2lb1OzoeljlLQ9z6iqxUWH-kd_sZFPsDxWaM9-Krc" target="_blank">
+                    <img src="https://moisescarrlloncv.000webhostapp.com/img/ibm.png" alt="IBM Icon" class="ibmimg"></a>
                     <p id="segundo-parrafo2">Graduation Year 2022</p>
                 </div>
                 <div>
-                    <p><b>Practical SQL and MySQL Course</b></p>
-                    <img src="https://moisescarrlloncv.000webhostapp.com/img/platzi.png" alt="Platzi Icon" class="platzimg">
-                    <p id="segundo-parrafo2">January 2022 - July 2022</p>
+                    <p id="segundo-parrafo3"><b>Practical SQL and MySQL Course</b></p>
+                    <a href="https://platzi.com/p/moises-carrillo/curso/1272-sql-mysql/diploma/detalle/" target="_blank">
+                    <img src="https://moisescarrlloncv.000webhostapp.com/img/platzi.png" alt="Platzi Icon" class="platzimg"></a>
+                    <p id="segundo-parrafo2">July 2022 - August 2022</p>
                 </div>
                 <div>
-                    <p><b>Database Fundamentals Course</b></p>
-                    <img src="https://moisescarrlloncv.000webhostapp.com/img/platzi.png" alt="Platzi Icon" class="platzimg1">
-                    <p id="segundo-parrafo2">January 2022 - July 2022</p>
+                    <p id="segundo-parrafo3"><b>Database Fundamentals Course</b></p>
+                    <a href="https://platzi.com/p/moises-carrillo/curso/1566-bd/diploma/detalle/" target="_blank">
+                    <img src="https://moisescarrlloncv.000webhostapp.com/img/platzi.png" alt="Platzi Icon" class="platzimg1"></a>
+                    <p id="segundo-parrafo2">July 2022 - July 2022</p>
                 </div>
                 <div>
-                    <p><b>PostgreSQL Course</b></p>
-                    <img src="https://moisescarrlloncv.000webhostapp.com/img/platzi.png" alt="Platzi Icon" class="platzimg2">
-                    <p id="segundo-parrafo2">January 2022 - July 2022</p>
+                    <p id="segundo-parrafo3"><b>PostgreSQL Course</b></p>
+                    <a href="https://platzi.com/p/moises-carrillo/curso/1480-postgresql/diploma/detalle/" target="_blank">
+                    <img src="https://moisescarrlloncv.000webhostapp.com/img/platzi.png" alt="Platzi Icon" class="platzimg2"></a>
+                    <p id="segundo-parrafo2">June 2022 - June 2022</p>
                 </div>
             </section>
 
             <section>
-                <div>
                 <h2>Projects</h2>
                 <ul>
-                    <li id="Proyectos">Website Development: <a href=https://github.com/apt-install-mcn/battle-beast target="_blank">Battle beast (Repositorio)</a></li>
-                    <li>Website Development: <a href=https://github.com/apt-install-mcn/HTML-INTRO target="_blank">Resume (Repositorio)</a></li>
+                    <li id="Proyectos" class="project-item">
+                        Battle Beast
+                        <a href="https://github.com/apt-install-mcn" target="_blank">
+                            <img src="https://moisescarrlloncv.000webhostapp.com/img/github.png" alt="GitHub Icon" class="gitimgp">
+                        </a>
+                    </li>
+                    <li class="project-item">
+                        Curriculum
+                        <a href="https://github.com/apt-install-mcn/HTML-INTRO" target="_blank">
+                            <img src="https://moisescarrlloncv.000webhostapp.com/img/github.png" alt="GitHub Icon" class="gitimgp">
+                        </a>
+                    </li>
                 </ul>
-                </div>
             </section>
+            
         </div>
     </div>
+    <script src="theme-toggle.js"></script>
 </body>
 </html>
 
