@@ -5,37 +5,78 @@ body, body * {
 }
 
 
+/* Estilos para el contenedor del interruptor */
 .theme-toggle {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 24px;
-    background-color: #ccc;
-    border-radius: 12px;
-    margin: 10px;
-}
-
-.theme-toggle-checkbox {
-    display: none;
-}
-
-.theme-toggle-label {
+    position: absolute; /* Posición fija para mantenerlo en la esquina */
+    top: 20px; /* Distancia desde la parte superior */
+    left: 20px; /* Distancia desde la izquierda */
+    width: 60px; /* Aumentar el ancho para un aspecto más elegante */
+    height: 30px; /* Aumentar la altura para un mejor aspecto */
+    display: flex;
+    align-items: center;
+    background-color: #333; /* Color de fondo en modo oscuro */
+    border-radius: 30px; /* Aumentar el radio para un aspecto más suave */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 2px; /* Espacio entre el borde y el contenido */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+  }
+  
+  /* Estilos para el interruptor (el input[type="checkbox"]) */
+  .theme-toggle-checkbox {
+    display: none; /* Ocultar el checkbox real */
+  }
+  
+  /* Estilos para el icono del interruptor */
+  .theme-toggle-icon {
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    margin-left: 2px; /* Espacio entre el borde y la bola */
+    transform: translateX(0); /* Inicialmente, la bola está a la izquierda */
+  }
+  
+  /* Estilos para la etiqueta que actúa como control personalizado */
+  .theme-toggle-label {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 100%; /* Hacer que la etiqueta cubra todo el contenedor */
     height: 100%;
-    background-color: #333;
-    border-radius: 12px;
+    background-color: #ccc;
+    border-radius: 30px; /* Aumentar el radio para un aspecto más suave */
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-
-.theme-toggle-checkbox:checked + .theme-toggle-label {
-    left: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    padding-left: 5px; /* Agregar un pequeño espacio a la izquierda */
+  }
+  
+  /* Estilo visual adicional para el interruptor */
+  .theme-toggle-label::before {
+    content: '';
+    width: 26px;
+    height: 26px;
     background-color: #fff;
-}
+    border-radius: 50%;
+    transition: transform 0.3s;
+    margin-left: 2px; /* Agregar espacio entre el borde y la bola */
+  }
+  
+  /* Estilos para el contenedor cuando el interruptor está marcado */
+  .theme-toggle-checkbox:checked + .theme-toggle-label {
+    background-color: #333; /* Cambiar el color en modo oscuro */
+  }
+  
+  /* Estilo visual cuando el interruptor está marcado */
+  .theme-toggle-checkbox:checked + .theme-toggle-label::before {
+    transform: translateX(22px); /* Mover la bola del interruptor */
+    background-color: #007bff; /* Cambiar el color de la bola en modo oscuro */
+  }
+  
+  
 
 
 
@@ -148,8 +189,10 @@ table td:hover::before {
 
 
 .perfilimg {
-    width: 250px;
-    height: 300px;
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+    max-height: 100%; /* Asegura que la imagen no sea más alta que su contenedor */
+    width: auto; /* Permite que la imagen se ajuste proporcionalmente al contenedor */
+    height: auto; /* Permite que la imagen se ajuste proporcionalmente al contenedor */
     border: 3px solid #2C3E52;
     border-radius: 5px;
     display: flex;
@@ -158,6 +201,7 @@ table td:hover::before {
     margin-left: 0%;
     margin-right: 0%;
 }
+
 
 .gitimg {
 
@@ -359,7 +403,12 @@ table td:hover::before {
 }
 
 @media (max-width: 1135px) {
-    .platzimg, .platzimg1, .platzimg2, .ibmimg, .googleimg, .gitimgp, {
+    .platzimg, 
+    .platzimg1, 
+    .platzimg2, 
+    .ibmimg, 
+    .googleimg, 
+    .gitimgp {
       margin-left: 0;
     }
   }
