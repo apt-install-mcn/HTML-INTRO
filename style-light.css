@@ -11,9 +11,17 @@ body.light {
 }
 
 .perfilimg {
-  width: 250px;
-  height: 300px;
-  border: 3px solid #eef5f7;
+  max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+  max-height: 100%; /* Asegura que la imagen no sea más alta que su contenedor */
+  width: auto; /* Permite que la imagen se ajuste proporcionalmente al contenedor */
+  height: auto; /* Permite que la imagen se ajuste proporcionalmente al contenedor */
+  border: 3px solid #effafe;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0%;
+  margin-right: 0%;
 }
 
 .right-column section, .right-column h2 {
